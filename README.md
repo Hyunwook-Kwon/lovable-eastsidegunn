@@ -219,6 +219,12 @@ lovable-eastsidegunn/
 
 ---
 
+## 🏆 출품
+
+해당 작품은 **nomadams** 에서 **[makr.ai](https://makr.ai)** 의 후원을 받아 **변기톤** 에 출품된 작품입니다. 🚽
+
+---
+
 ## 📜 License
 
 [MIT](LICENSE). 캐릭터 일러스트도 자유 사용 — 단 동건이 표정은 보존해주세요.
