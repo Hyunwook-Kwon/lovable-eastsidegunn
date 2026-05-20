@@ -1,5 +1,5 @@
 -- 🍙 동건이 데스크탑 오버레이 (Hammerspoon)
--- repo:  https://github.com/Hyunwook-Kwon/lovable-eastsidegunn
+-- repo:  https://github.com/NomaDamas/lovable-eastsidegunn
 -- entry: ~/.hammerspoon/init.lua  →  require("donggun")
 --
 -- 화면 코너에 투명 webview로 동건이를 항상 위에 띄움.

@@ -12,7 +12,7 @@ brew install --cask hammerspoon   # 없으면
 xcode-select --install            # python3 없으면
 
 # 2. Clone + install
-git clone https://github.com/Hyunwook-Kwon/lovable-eastsidegunn.git
+git clone https://github.com/NomaDamas/lovable-eastsidegunn.git
 cd lovable-eastsidegunn
 ./install.sh                      # ~/.hammerspoon/donggun/ 에 깔림
 
@@ -45,7 +45,7 @@ cd lovable-eastsidegunn
 
 ## 🐛 버그 제보
 
-[GitHub Issues](https://github.com/Hyunwook-Kwon/lovable-eastsidegunn/issues/new/choose) 에서 **🐛 버그 리포트** 템플릿 사용. 다음만 채워주시면 디버깅 빨라집니다:
+[GitHub Issues](https://github.com/NomaDamas/lovable-eastsidegunn/issues/new/choose) 에서 **🐛 버그 리포트** 템플릿 사용. 다음만 채워주시면 디버깅 빨라집니다:
 
 - macOS 버전
 - Hammerspoon 버전 (메뉴바 → About Hammerspoon)

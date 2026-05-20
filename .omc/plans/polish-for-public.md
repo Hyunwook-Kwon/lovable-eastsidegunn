@@ -1,7 +1,7 @@
 # Plan: Polish for Public Visibility
 
 **Created:** 2026-05-20
-**Repo:** Hyunwook-Kwon/lovable-eastsidegunn
+**Repo:** NomaDamas/lovable-eastsidegunn
 **Local:** /Users/kwon/Documents/donggun-hammerspoon
 **Status:** Draft — awaiting user confirmation
 
@@ -285,11 +285,11 @@ QA Gate                  ──── manual verification checklist
 
   ## 설치
   ```bash
-  git clone https://github.com/Hyunwook-Kwon/lovable-eastsidegunn.git
+  git clone https://github.com/NomaDamas/lovable-eastsidegunn.git
   cd lovable-eastsidegunn && ./install.sh
   ```
 
-  자세한 내용은 [README.md](https://github.com/Hyunwook-Kwon/lovable-eastsidegunn#readme) 참고.
+  자세한 내용은 [README.md](https://github.com/NomaDamas/lovable-eastsidegunn#readme) 참고.
   EOF
   )"
   ```
@@ -304,15 +304,15 @@ Run after Wave 3 completes. All must pass.
 
 | # | Check | Command / Method | Pass Criteria |
 |---|---|---|---|
-| 1 | README renders on GitHub | `open https://github.com/Hyunwook-Kwon/lovable-eastsidegunn` | Badges visible, demo GIF animates, no broken images |
-| 2 | Demo GIF loads | `open https://github.com/Hyunwook-Kwon/lovable-eastsidegunn/blob/main/docs/demo.gif` | Animates, ≤1.5MB, asymmetric timing visible |
+| 1 | README renders on GitHub | `open https://github.com/NomaDamas/lovable-eastsidegunn` | Badges visible, demo GIF animates, no broken images |
+| 2 | Demo GIF loads | `open https://github.com/NomaDamas/lovable-eastsidegunn/blob/main/docs/demo.gif` | Animates, ≤1.5MB, asymmetric timing visible |
 | 3 | AGENTS.md accurate | Read AGENTS.md §6 table | All new files listed in file responsibility map |
 | 4 | Issue template works | Click "New Issue" on GitHub | Bug report template appears with Korean fields |
 | 5 | CONTRIBUTING.md linked | Click link in README | Renders, Korean-primary, links back to AGENTS.md |
 | 6 | .editorconfig correct | `cat .editorconfig` | Lua=4sp, JS=2sp, UTF-8, LF |
 | 7 | Release exists | `gh release view v1.0.0` | Tag exists, release notes render, Korean text intact |
 | 8 | install.sh still works | `./install.sh` (idempotent re-run) | No errors, no duplicate `require("donggun")` lines |
-| 9 | Community health score | `open https://github.com/Hyunwook-Kwon/lovable-eastsidegunn/community` | Score ≥ 70% (up from 42%) |
+| 9 | Community health score | `open https://github.com/NomaDamas/lovable-eastsidegunn/community` | Score ≥ 70% (up from 42%) |
 | 10 | Git clean | `git status` | Nothing untracked, working tree clean |
 
 ---

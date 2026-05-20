@@ -63,7 +63,7 @@
 ## 🚀 Install
 
 ```bash
-git clone https://github.com/Hyunwook-Kwon/lovable-eastsidegunn.git
+git clone https://github.com/NomaDamas/lovable-eastsidegunn.git
 cd lovable-eastsidegunn
 ./install.sh
 ```
@@ -221,7 +221,7 @@ lovable-eastsidegunn/
 
 ## 🏆 출품
 
-해당 작품은 **nomadams** 에서 **[makr.ai](https://makr.ai)** 의 후원을 받아 **변기톤** 에 출품된 작품입니다. 🚽
+해당 작품은 **[NomaDamas](https://github.com/NomaDamas)** 에서 **[Markr AI](https://makr.ai)** 의 후원을 받아 **변기톤** 에 출품된 작품입니다. 🚽
 
 ---
 
