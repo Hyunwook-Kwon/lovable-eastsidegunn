@@ -1,10 +1,23 @@
 # 🍙 donggun — Hammerspoon Desktop Overlay
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Platform: macOS](https://img.shields.io/badge/platform-macOS-blue.svg)](https://www.apple.com/macos/)
+[![Runtime: Hammerspoon](https://img.shields.io/badge/runtime-Hammerspoon-orange.svg)](https://www.hammerspoon.org/)
+[![Lang: Korean primary](https://img.shields.io/badge/lang-한국어-red.svg)](#)
+
 > 화면 코너에서 조용히 혼밥하는 동건이. 누가 다가오면 들킬까봐 굳어버린다.
 > **A microphone-reactive macOS desktop character, built on Hammerspoon + WebView.**
 
 <p align="center">
-  <img src="docs/screenshot.png" alt="donggun overlay screenshot" width="640">
+  <img src="docs/demo.gif" alt="동건이가 소음에 놀라 굳었다가 천천히 진정하는 데모" width="320">
+  <br>
+  <sub>🎤 켜둔 마이크에 소음이 들어오면 즉각 굳고, 조용해지면 천천히 다시 먹는다 (asymmetric smoothing)</sub>
+</p>
+
+<p align="center">
+  <img src="docs/screenshot.png" alt="donggun in context: 화장실 칸에서 도시락 먹다 들킨 동건이" width="640">
+  <br>
+  <sub>화장실 칸에서 들킨 동건이 — paused 상태 / 도시락 / "연차 = 점심값 절약"</sub>
 </p>
 
 ---
@@ -105,6 +118,25 @@ open -a Hammerspoon
 
 ```
 lovable-eastsidegunn/
+├── README.md                 # 사용자용 (한국어 primary)
+├── AGENTS.md                 # AI/도구 에이전트용 가이드
+├── CONTRIBUTING.md           # 🤝 기여 가이드 (음식 추가, 버그 제보 등)
+├── LICENSE                   # MIT
+├── .editorconfig             # 에디터 whitespace 규칙
+├── .github/
+│   └── ISSUE_TEMPLATE/
+│       └── bug_report.md     # 🐛 버그 리포트 템플릿
+├── install.sh                # idempotent installer → ~/.hammerspoon/donggun/
+├── uninstall.sh              # safe uninstaller (creates backups)
+├── donggun/                  # 그대로 ~/.hammerspoon/donggun/ 으로 복사됨
+│   ├── init.lua              # Hammerspoon entrypoint (require("donggun"))
+│   ├── donggun.html          # WebView 본체 — 상태 머신 + 오디오 분석 + 애니메이션
+│   └── assets/               # 26 개 sprite PNG (v5)
+└── docs/
+    ├── demo.gif              # 비대칭 smoothing 애니메이션 (1MB, 320×320)
+    └── screenshot.png        # 컨텍스트 스크린샷
+```
+lovable-eastsidegunn/
 ├── README.md            # this file
 ├── AGENTS.md            # AI/도구 에이전트용 가이드 (테스트·확장·금기)
 ├── LICENSE              # MIT
@@ -183,7 +215,7 @@ lovable-eastsidegunn/
 
 말풍선 풀을 손보고 싶으면 [`donggun/donggun.html`](donggun/donggun.html) 의 `THOUGHTS` 객체를 편집하면 끝. webview 만 reload (`Cmd+Shift+R`) 하면 즉시 반영.
 
-새 음식 추가 방법은 [AGENTS.md → Extension recipes](AGENTS.md#extension-recipes) 참고.
+새 음식 추가·버그 제보·PR 등은 [CONTRIBUTING.md](CONTRIBUTING.md) 참고. AI 에이전트가 이 repo 를 만질 때는 [AGENTS.md](AGENTS.md) 가 진실의 원천.
 
 ---
 

@@ -11,6 +11,8 @@ Hammerspoon module — **Lua entrypoint + single-page WebView**. macOS-only. No 
 - `donggun/donggun.html` — All character behavior: state machine, audio analysis, animations, thoughts.
 - `donggun/assets/*.png` — 26 sprite PNGs named `donggun_v5_{food}[_pause_mid{1,2}|_paused].png` plus `donggun_v5_{choking,changing}.png`.
 
+Surrounding community files (do not affect runtime): `README.md` (human), `AGENTS.md` (this), `CONTRIBUTING.md` (contributor flow), `LICENSE` (MIT), `.editorconfig` (whitespace), `.github/ISSUE_TEMPLATE/*.md` (issue forms), `docs/{demo.gif,screenshot.png}` (visuals).
+
 Total LOC: ~200 (Lua) + ~660 (HTML). Read both fully before nontrivial changes.
 
 ## 2. Quick context
@@ -79,8 +81,13 @@ Visual verification: take a screenshot with `screencapture -m /tmp/check.png` af
 | `donggun/assets/*.png` | Static visuals only | New food / new state |
 | `install.sh` | Idempotent install + init.lua append | Install flow changes |
 | `uninstall.sh` | Safe removal | Uninstall flow changes |
-| `README.md` | Human-facing onboarding | When user-visible behavior changes |
-| `AGENTS.md` | Agent-facing guidance | When file structure / invariants change |
+| `README.md` | Human-facing onboarding (Korean primary, badges, demo GIF) | When user-visible behavior changes |
+| `AGENTS.md` | Agent-facing guidance (this file) | When file structure / invariants change |
+| `CONTRIBUTING.md` | Human contributor workflow (Korean) | When contribution flow changes |
+| `.editorconfig` | Editor whitespace rules (Lua=4sp, JS=2sp, sh=2sp) | When indent conventions change |
+| `.github/ISSUE_TEMPLATE/*.md` | GitHub issue forms (bug report) | When bug-report fields need change |
+| `docs/demo.gif` | Asymmetric smoothing animation (eating→paused→eating) | When sprite set or state machine changes |
+| `docs/screenshot.png` | Hero shot showing in-context use | When concept/scene changes |
 
 ## 7. Extension recipes
 
