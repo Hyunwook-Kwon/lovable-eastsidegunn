@@ -154,33 +154,6 @@ lovable-eastsidegunn/
 
 ## 🧠 How it works
 
-```
-┌─────────────────────────────────────────────────────┐
-│  Hammerspoon (Lua)                                  │
-│  ┌──────────────────────────────────────────────┐   │
-│  │ donggun/init.lua                             │   │
-│  │  ├─ hs.task → python3 -m http.server :8765   │   │
-│  │  │  (root = scriptDir())                     │   │
-│  │  ├─ hs.webview → renders donggun.html        │   │
-│  │  ├─ hs.hotkey → Cmd+Shift+{D,R,H,M}          │   │
-│  │  ├─ hs.eventtap → Cmd+Shift+Drag             │   │
-│  │  └─ hs.spaces / screen watchers              │   │
-│  └──────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────┘
-                        │
-                        ▼  http://127.0.0.1:8765/donggun.html
-┌─────────────────────────────────────────────────────┐
-│  WebView (WebKit, transparent)                      │
-│  ┌──────────────────────────────────────────────┐   │
-│  │ donggun/donggun.html                         │   │
-│  │  ├─ getUserMedia → AudioContext analyser     │   │
-│  │  ├─ smoothed avg level (asymmetric)          │   │
-│  │  ├─ STAGE_ORDER ladder: eating → ... → paused│   │
-│  │  └─ food rotation + choking events           │   │
-│  └──────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────┘
-```
-
 **왜 localhost HTTP 서버를 쓰나?** WebKit 은 `file://` 컨텍스트에서 `getUserMedia` 를 차단한다. `http://127.0.0.1:*` 에서 띄워야 마이크 권한 prompt 가 뜨고 음향 분석이 가능하다.
 
 **왜 `donggun` 변수가 global 인가?** Hammerspoon Console 에서 `donggun:reload()` 같이 라이브 디버깅하려면 global 이어야 한다. local 로 두면 webview 가 stale HTML 을 잡고 놓지 않아 디버깅 지옥에 빠진다.
